@@ -3,6 +3,7 @@ import axios from 'axios'
 
 //importing components
 import AddForm from './components/AddForm.js'
+import EditForm from './components/EditForm.js'
 
 const App = () => {
 
@@ -38,6 +39,21 @@ const App = () => {
       })
   }
 
+  const editWorld = (updatedWorld, e) => {
+    axios
+      .put('https://concoction.herokuapp.com/api/worlds/' + updatedWorld.id, updatedWorld)
+      .then((response) => {
+        let newWorldsArr = worlds.map((world) => {
+          if (world.id === updatedWorld.id) {
+            return updatedWorld
+          } else {
+            return world
+          }
+        })
+        setWorlds(newWorldsArr)
+      })
+  }
+
   useEffect(() => {
     getAllWorlds()
   }, [])
@@ -52,6 +68,10 @@ const App = () => {
           <h3>{world.name}</h3>
           <h4>Creation: {world.creation}</h4>
           <h4>Notes: {world.notes}</h4>
+          <details>
+            <summary>Edit World</summary>
+            <EditForm world={world} editWorld={editWorld} />
+          </details>
           <button onClick={() => deleteWorld(world.id)}>X</button>
           </>
         )
