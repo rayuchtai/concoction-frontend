@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { BrowserRouter, Link, Route, Switch } from "react-router-dom"
 import axios from 'axios'
 
 //importing components
@@ -9,9 +10,10 @@ const App = () => {
 
   const [worlds, setWorlds] = useState([])
 
+//getting the data
   const getAllWorlds = () => {
     axios
-      .get('https://concoction.herokuapp.com/api/worlds')
+      .get('http://localhost:8000/api/worlds')
       .then((response) => {
 
         //add the data to state
@@ -20,18 +22,20 @@ const App = () => {
       .catch(error => console.error(`Error: ${error}`))
   }
 
+//creating a new world
   const addWorld = (world) => {
     axios
-      .post('https://concoction.herokuapp.com/api/worlds', world)
+      .post('http://localhost:8000/api/worlds', world)
       .then((response) => {
         setWorlds([...worlds, world])
       })
 
   }
 
+//Deleting a world
   const deleteWorld = (id) => {
     axios
-      .delete('https://concoction.herokuapp.com/api/worlds/' + id)
+      .delete('http://localhost:8000/api/worlds/' + id)
       .then((response) => {
         setWorlds(worlds.filter((world) => {
           return world.id !== id
@@ -39,18 +43,12 @@ const App = () => {
       })
   }
 
+//editing a world
   const editWorld = (updatedWorld, e) => {
     axios
-      .put('https://concoction.herokuapp.com/api/worlds/' + updatedWorld.id, updatedWorld)
+      .put('http://localhost:8000/api/worlds/' + updatedWorld.id, updatedWorld)
       .then((response) => {
-        let newWorldsArr = worlds.map((world) => {
-          if (world.id === updatedWorld.id) {
-            return updatedWorld
-          } else {
-            return world
-          }
-        })
-        setWorlds(newWorldsArr)
+        setWorlds([response.data])
       })
   }
 

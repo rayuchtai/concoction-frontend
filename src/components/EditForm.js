@@ -28,7 +28,7 @@ const EditForm = (props) => {
       <br />
       <label htmlFor="notes">Notes:</label>
       <br />
-      <textarea id="notes" type="text" name="notes" onChange={handleChange} 
+      <textarea id="notes" type="text" name="notes" onChange={handleChange}
             placeholder="extra info???" rows="3" required>
             </textarea>
       <br />
