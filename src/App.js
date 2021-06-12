@@ -11,7 +11,7 @@ const App = () => {
 
   const getAllWorlds = () => {
     axios
-      .get('https://concoction.herokuapp.com/api/worlds')
+      .get('http://localhost:8000/api/worlds')
       .then((response) => {
 
         //add the data to state
@@ -22,7 +22,7 @@ const App = () => {
 
   const addWorld = (world) => {
     axios
-      .post('https://concoction.herokuapp.com/api/worlds', world)
+      .post('http://localhost:8000/api/worlds', world)
       .then((response) => {
         setWorlds([...worlds, world])
       })
@@ -31,7 +31,7 @@ const App = () => {
 
   const deleteWorld = (id) => {
     axios
-      .delete('https://concoction.herokuapp.com/api/worlds/' + id)
+      .delete('http://localhost:8000/api/worlds/' + id)
       .then((response) => {
         setWorlds(worlds.filter((world) => {
           return world.id !== id
@@ -41,16 +41,9 @@ const App = () => {
 
   const editWorld = (updatedWorld, e) => {
     axios
-      .put('https://concoction.herokuapp.com/api/worlds/' + updatedWorld.id, updatedWorld)
+      .put('http://localhost:8000/api/worlds/' + updatedWorld.id, updatedWorld)
       .then((response) => {
-        let newWorldsArr = worlds.map((world) => {
-          if (world.id === updatedWorld.id) {
-            return updatedWorld
-          } else {
-            return world
-          }
-        })
-        setWorlds(newWorldsArr)
+        setWorlds([response.data])
       })
   }
 
