@@ -50,8 +50,7 @@ const App = () => {
     axios
       .put('http://localhost:8000/api/worlds/' + updatedWorld.id, updatedWorld)
       .then((response) => {
-        let editWorld = response.data
-        setWorlds([...worlds, editWorld])
+        return updatedWorld
       })
   }
 
