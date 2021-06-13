@@ -14,7 +14,7 @@ const App = () => {
 //getting the data
   const getAllWorlds = () => {
     axios
-      .get('https://concoction.herokuapp.com/api/worlds')
+      .get('http://localhost:8000/api/worlds')
       .then((response) => {
 
         //add the data to state
@@ -27,7 +27,7 @@ const App = () => {
 //creating a new world
   const addWorld = (world) => {
     axios
-      .post('https://concoction.herokuapp.com/api/worlds', world)
+      .post('http://localhost:8000/api/worlds', world)
       .then((response) => {
         setWorlds([...worlds, world])
       })
@@ -37,7 +37,7 @@ const App = () => {
 //Deleting a world
   const deleteWorld = (id) => {
     axios
-      .delete('https://concoction.herokuapp.com/api/worlds/' + id)
+      .delete('http://localhost:8000/api/worlds/' + id)
       .then((response) => {
         setWorlds(worlds.filter((world) => {
           return world.id !== id
@@ -48,7 +48,7 @@ const App = () => {
 //editing a world
   const editWorld = (updatedWorld, e) => {
     axios
-      .put('https://concoction.herokuapp.com/api/worlds/' + updatedWorld.id, updatedWorld)
+      .put('http://localhost:8000/api/worlds/' + updatedWorld.id, updatedWorld)
       .then((response) => {
         setWorlds([response.data])
       })
@@ -83,7 +83,7 @@ const App = () => {
                 <Worlds
                   world={world}
                   worlds={worlds}
-                  edit={editWorld}
+                  editWorld={editWorld}
                   deleteWorld={deleteWorld}
                 />
               )
