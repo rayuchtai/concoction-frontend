@@ -5,7 +5,7 @@ import EditForm from './EditForm.js'
 const Worlds = (props) => {
 
   return (
-    <div className="display">
+    <div className="display-worlds">
           <>
           <h3>{props.world.name}</h3>
           <h4>Creation: {props.world.creation}</h4>

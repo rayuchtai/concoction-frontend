@@ -77,17 +77,19 @@ const App = () => {
             <Home />
           </Route>
           <Route path="/worlds">
-            <h1>Worlds</h1>
-            {worlds.reverse().map((world) => {
-              return (
-                <Worlds
-                  world={world}
-                  worlds={worlds}
-                  editWorld={editWorld}
-                  deleteWorld={deleteWorld}
-                />
-              )
-            })}
+            <div className="worlds">
+              <h1>Worlds</h1>
+              {worlds.reverse().map((world) => {
+                return (
+                  <Worlds
+                    world={world}
+                    worlds={worlds}
+                    editWorld={editWorld}
+                    deleteWorld={deleteWorld}
+                  />
+                )
+              })}
+            </div>
           </Route>
           <Route path="/create">
             <AddForm
