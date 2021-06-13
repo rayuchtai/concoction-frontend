@@ -18,6 +18,7 @@ const App = () => {
       .then((response) => {
 
         //add the data to state
+        console.log(response.data);
         setWorlds(response.data)
       })
       .catch(error => console.error(`Error: ${error}`))
@@ -76,6 +77,7 @@ const App = () => {
             <Home />
           </Route>
           <Route path="/worlds">
+            <h1>Worlds</h1>
             {worlds.reverse().map((world) => {
               return (
                 <Worlds
@@ -88,7 +90,9 @@ const App = () => {
             })}
           </Route>
           <Route path="/create">
-            <AddForm addWorld={addWorld} />
+            <AddForm
+              addWorld={addWorld}
+            />
           </Route>
         </Switch>
       </BrowserRouter>
