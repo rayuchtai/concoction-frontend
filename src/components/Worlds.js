@@ -5,7 +5,7 @@ import EditForm from './EditForm.js'
 const Worlds = (props) => {
 
   return (
-    <div className="display-worlds">
+    <div className="world">
           <>
           <h3>{props.world.name}</h3>
           <h4>Creation: {props.world.creation}</h4>
@@ -14,7 +14,7 @@ const Worlds = (props) => {
             <summary>Edit World</summary>
             <EditForm world={props.world} editWorld={props.editWorld} />
           </details>
-          <button onClick={() => props.deleteWorld(props.world.id)}>X</button>
+          <button className="btn btn-danger" id="delete-btn" onClick={() => props.deleteWorld(props.world.id)}>Delete World</button>
           </>
     </div>
   )

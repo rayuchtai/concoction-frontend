@@ -1,7 +1,10 @@
+import React from 'react'
 
 const Home = () => {
   return (
-    <h1> Welcome to Concoction</h1>
+    <div className="welcome-page">
+      <h1>Welcome to Concoction</h1>
+    </div>
   )
 }
 

@@ -62,9 +62,9 @@ const App = () => {
     <div className="app">
       <BrowserRouter>
         <nav>
-          <div>
-            <Link to="/">Home</Link>
-          </div>
+        <div>
+          <Link to="/">Home</Link>
+        </div>
           <div>
             <Link to="/worlds">Worlds</Link>
           </div>
@@ -73,9 +73,6 @@ const App = () => {
           </div>
         </nav>
         <Switch>
-          <Route path="/home">
-            <Home />
-          </Route>
           <Route path="/worlds">
             <div className="worlds">
               <h1>Worlds</h1>
@@ -95,6 +92,9 @@ const App = () => {
             <AddForm
               addWorld={addWorld}
             />
+          </Route>
+          <Route path="/">
+            <Home />
           </Route>
         </Switch>
       </BrowserRouter>
