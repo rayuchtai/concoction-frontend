@@ -4,7 +4,6 @@ import axios from 'axios'
 
 //importing components
 import AddForm from './components/AddForm.js'
-import EditForm from './components/EditForm.js'
 import Worlds from './components/Worlds.js'
 import Home from './components/Home.js'
 
