@@ -1,0 +1,46 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.navbar-nav {
+	 width: 350px;
+   position: fixed;
+   top: 10px;
+   left: 5px;
+   overflow-x: hidden;
+   padding: 8px 0;
+   flex-direction: column;
+}
+
+.navbar-nav > .nav-item {
+	padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  display: block;
+}
+.nav-link {
+  color: rgb(86, 139, 191);
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+.navbar > .container-fluid {
+  justify-content:space-between;
+}
+
+#mySidebar {
+  position: absolute;
+  flex-flow: row;
+  align-items: center;
+}
+
+@media screen and (max-width: 700px) {
+
+  .navbar-nav {
+  	 width: 225px;
+
+   }
+
+}

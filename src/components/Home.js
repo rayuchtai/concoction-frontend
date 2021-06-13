@@ -56,7 +56,7 @@ const Home = () => {
       <div className="welcome-words">
         <h1>Concoction</h1>
         <p>
-          Concoction is a place where writers can post world ideas that can inspire other writers to create their own worlds and/or help writers create their own world for their writing piece.
+          Concoction is a place where writers can post world ideas that can inspire other writers <br /> to create their own worlds and/or help writers create their own world for their writing piece.
         </p>
         <p>
           Remember to have fun creating worlds!
