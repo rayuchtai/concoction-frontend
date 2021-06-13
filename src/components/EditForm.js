@@ -15,26 +15,26 @@ const EditForm = (props) => {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label htmlFor="name">Name:</label>
-      <br />
-      <input id="name" type="text" name="name" onChange={handleChange}/>
-      <br />
-      <br />
-      <label htmlFor="creation">Creation:</label>
-      <br />
-      <textarea id="creation" type="text" name="creation" onChange={handleChange} placeholder="How was the world created?" rows="3" required></textarea>
-      <br />
-      <br />
-      <label htmlFor="notes">Notes:</label>
-      <br />
-      <textarea id="notes" type="text" name="notes" onChange={handleChange}
-            placeholder="Important world features to note..." rows="3" required>
-            </textarea>
-      <br />
-      <br />
-      <input type="submit" value="Edit World" />
-    </form>
+    <div className="edit-form">
+      <form onSubmit={handleSubmit}>
+        <div className="form-group" id="edit-name">
+          <label htmlFor="name">Name:</label>
+          <input id="name" className="form-control" type="text" name="name" onChange={handleChange}/>
+        </div>
+        <div className="form-group" id="edit-creation">
+          <label htmlFor="creation">Creation:</label>
+          <textarea id="creation" className="form-control" type="text" name="creation" onChange={handleChange} placeholder="How was the world created?" rows="3" required></textarea>
+        </div>
+        <div className="form-group">
+          <label htmlFor="notes">Notes:</label>
+          <textarea id="notes" className="form-control" type="text" name="notes" onChange={handleChange}
+                placeholder="Important world features to note..." rows="3" required>
+                </textarea>
+        </div>
+        <input type="submit" className="btn btn-primary" value="Edit World" />
+      </form>
+      <button className="btn btn-danger" id="delete-btn" onClick={() => props.deleteWorld(props.world.id)}>Delete World</button>
+    </div>
   )
 }
 
