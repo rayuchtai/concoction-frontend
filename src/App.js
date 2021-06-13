@@ -50,7 +50,14 @@ const App = () => {
     axios
       .put('http://localhost:8000/api/worlds/' + updatedWorld.id, updatedWorld)
       .then((response) => {
-        return updatedWorld
+        let newWorldsArray = worlds.map((world) => {
+          if (world.id === updatedWorld.id) {
+            return updatedWorld
+          } else {
+            return world
+          }
+        })
+        setWorlds(newWorldsArray)
       })
   }
 

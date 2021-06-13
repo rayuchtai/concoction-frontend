@@ -10,6 +10,7 @@ const EditForm = (props) => {
   }
 
   const handleSubmit = (e) => {
+    e.preventDefault()
     props.editWorld(world)
   }
 
