@@ -33,6 +33,7 @@ const EditForm = (props) => {
         </div>
         <input type="submit" className="btn btn-primary" value="Edit World" />
       </form>
+      <button className="btn btn-danger" id="delete-btn" onClick={() => props.deleteWorld(props.world.id)}>Delete World</button>
     </div>
   )
 }

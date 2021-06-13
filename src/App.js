@@ -68,22 +68,25 @@ const App = () => {
   return (
     <div className="app">
       <BrowserRouter>
-        <nav>
-        <div>
-          <Link to="/">Home</Link>
-        </div>
-          <div>
-            <Link to="/worlds">Worlds</Link>
-          </div>
-          <div>
-            <Link to="/create">Create a World</Link>
-          </div>
-        </nav>
+        <ul className="nav nav-tabs justify-content-beginning">
+          <li className="nav-item">
+            <Link className="nav-link" to="/">Home</Link>
+          </li>
+          <li className="nav-item" >
+            <Link className="nav-link" to="/worlds">Worlds</Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/create">Create a World</Link>
+          </li>
+          <li className="nav-item" id="app-name" >
+              <p className="nav-link" >Concoction</p>
+          </li>
+        </ul>
         <Switch>
           <Route path="/worlds">
             <div className="worlds">
               <h1>Worlds</h1>
-              {worlds.reverse().map((world) => {
+              {worlds.map((world) => {
                 return (
                   <Worlds
                     world={world}
