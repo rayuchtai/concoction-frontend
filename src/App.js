@@ -50,7 +50,14 @@ const App = () => {
     axios
       .put('https://concoction.herokuapp.com/api/worlds/' + updatedWorld.id, updatedWorld)
       .then((response) => {
-        setWorlds([response.data])
+        let newWorldsArray = worlds.map((world) => {
+          if (world.id === updatedWorld.id) {
+            return updatedWorld
+          } else {
+            return world
+          }
+        })
+        setWorlds(newWorldsArray)
       })
   }
 
@@ -61,38 +68,43 @@ const App = () => {
   return (
     <div className="app">
       <BrowserRouter>
-        <nav>
-          <div>
-            <Link to="/">Home</Link>
-          </div>
-          <div>
-            <Link to="/worlds">Worlds</Link>
-          </div>
-          <div>
-            <Link to="/create">Create a World</Link>
-          </div>
-        </nav>
+        <ul className="nav nav-tabs justify-content-beginning">
+          <li className="nav-item">
+            <Link className="nav-link" to="/">Home</Link>
+          </li>
+          <li className="nav-item" >
+            <Link className="nav-link" to="/worlds">Worlds</Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/create">Create a World</Link>
+          </li>
+          <li className="nav-item" id="app-name" >
+              <p className="nav-link" >Concoction</p>
+          </li>
+        </ul>
         <Switch>
-          <Route path="/home">
-            <Home />
-          </Route>
           <Route path="/worlds">
-            <h1>Worlds</h1>
-            {worlds.reverse().map((world) => {
-              return (
-                <Worlds
-                  world={world}
-                  worlds={worlds}
-                  edit={editWorld}
-                  deleteWorld={deleteWorld}
-                />
-              )
-            })}
+            <div className="worlds">
+              <h1>Worlds</h1>
+              {worlds.map((world) => {
+                return (
+                  <Worlds
+                    world={world}
+                    worlds={worlds}
+                    editWorld={editWorld}
+                    deleteWorld={deleteWorld}
+                  />
+                )
+              })}
+            </div>
           </Route>
           <Route path="/create">
             <AddForm
               addWorld={addWorld}
             />
+          </Route>
+          <Route path="/">
+            <Home />
           </Route>
         </Switch>
       </BrowserRouter>

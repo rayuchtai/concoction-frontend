@@ -1,4 +1,4 @@
-# Concoction 
+# Concoction
 
 # About
 concoction is a world building app where writers can log information about the world(s) that they are creating. A place where a writer can refer back to and add new information about that world.
@@ -25,3 +25,8 @@ concoction is a world building app where writers can log information about the w
 3. D3JS
 4. Some UI Design like Models and/or a carousel.
 5. A Third Party Api that would generate a writing motivational quote that might help with writer's block.
+
+### Personal Purpose of this App
+1. To Tackle Django because I don't feel as comfortable with the backend wireframe because I don't know all of the pages that has been added
+2. To become more comfortable with React. I don't feel confident with my react skills prior to building this app.
+3. To Learn React Hooks and Functional Components.
