@@ -1,0 +1,54 @@
+.create-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.create-container > h1{
+  margin-top: 1em;
+  font-size: 2.5em;
+  font-family: 'Playball', cursive;
+}
+.add-form{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin: 3%;
+    margin-top: 0;
+    padding: oem 3em;
+    font-weight: bold;
+}
+
+#add {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  background-color: rgba(255,255,255, 0.3);
+  border-radius: 10px;
+  padding: 1.5em;
+  max-width: 1050px;
+  margin: 1% auto 0;
+}
+
+#add > form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#add > form > label {
+  font-size: 1.8em;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#add > form > input {
+  border: none;
+  font-family: 'Raleway', sans-serif;
+}
+
+#add > #add-btn {
+  margin-top: .50em;
+  border: none;
+  background-color: rgb(147, 182, 199)
+}

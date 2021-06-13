@@ -1,0 +1,29 @@
+.home-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome-words {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.2em;
+  background-color: rgba(255,255,255, 0.3);
+  line-height: 27px;
+  border-radius: 10px;
+  max-width: 950px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.welcome-words > p {
+  text-align: center;
+}
+
+.welcome-words > h1 {
+  font-family: 'Playball', cursive;
+  font-size: 4em;
+}

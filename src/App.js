@@ -68,20 +68,19 @@ const App = () => {
   return (
     <div className="app">
       <BrowserRouter>
-        <ul className="nav nav-tabs justify-content-beginning">
-          <li className="nav-item">
-            <Link className="nav-link" to="/">Home</Link>
-          </li>
-          <li className="nav-item" >
-            <Link className="nav-link" to="/worlds">Worlds</Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/create">Create a World</Link>
-          </li>
-          <li className="nav-item" id="app-name" >
-              <p className="nav-link" >Concoction</p>
-          </li>
-        </ul>
+        <nav className="nav-bar">
+          <ul className="nav nav-tabs justify-content-beginning">
+            <li className="nav-item">
+              <Link className="nav-link" to="/">Home</Link>
+            </li>
+            <li className="nav-item" >
+              <Link className="nav-link" to="/worlds">Worlds</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/create">Create a World</Link>
+            </li>
+          </ul>
+        </nav>
         <Switch>
           <Route path="/worlds">
             <div className="worlds">
@@ -99,9 +98,12 @@ const App = () => {
             </div>
           </Route>
           <Route path="/create">
-            <AddForm
-              addWorld={addWorld}
-            />
+            <div className="create-container">
+              <h1>Create a New World</h1>
+              <AddForm
+                addWorld={addWorld}
+              />
+            </div>
           </Route>
           <Route path="/">
             <Home />

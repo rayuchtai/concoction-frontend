@@ -16,10 +16,10 @@ const AddForm = (props) => {
 
   return (
     <div className="add-form">
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} id="add">
         <div className="form-group" id="add-name" >
           <label htmlFor="name">Name:</label>
-          <input id="name" className="form-control" type="text" name="name" value={world.name} onChange={handleChange}/>
+          <input id="name" className="form-control" type="text" name="name" placeholder="Name of World" value={world.name} onChange={handleChange}/>
         </div>
         <div className="form-group" id="add-creation">
           <label htmlFor="creation">Creation:</label>
@@ -31,7 +31,7 @@ const AddForm = (props) => {
                 placeholder="Important World Features to note..." rows="3" required>
                 </textarea>
         </div>
-          <input type="submit" value="Create New World" className="btn btn-primary" />
+          <input id="add-btn" type="submit" value="Create New World" className="btn btn-primary" />
       </form>
     </div>
   )

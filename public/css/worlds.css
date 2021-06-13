@@ -1,0 +1,40 @@
+.worlds {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.worlds > h1 {
+  margin-top: 1em;
+  font-size: 3em;
+  font-family: 'Playball', cursive;
+}
+
+.world {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  margin: 1em 0em;
+  font-family: 'Raleway', sans-serif;
+  background-color: rgba(216, 226, 220, 0.5)
+}
+.edit-form > form {
+  padding-bottom: .75em;
+}
+.edit-form > form > #edit-btn {
+  margin-top: .75em;
+  margin-right: .50em;
+  width: 100px;
+  border: none;
+  background-color: rgb(169, 209, 212)
+}
+
+.edit-form > form > #delete-btn {
+  margin-top: .75em;
+  margin-right: .50em;
+  width: 100px;
+  border:none;
+  background-color: rgb(255, 128, 128)
+
+}

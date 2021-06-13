@@ -31,9 +31,10 @@ const EditForm = (props) => {
                 placeholder="Important world features to note..." rows="3" required>
                 </textarea>
         </div>
-        <input type="submit" className="btn btn-primary" value="Edit World" />
+        <input id="edit-btn" type="submit" className="btn btn-primary" value="Edit World" />
+        <button className="btn btn-danger" id="delete-btn" onClick={() => props.deleteWorld(props.world.id)}>Delete</button>
       </form>
-      <button className="btn btn-danger" id="delete-btn" onClick={() => props.deleteWorld(props.world.id)}>Delete World</button>
+
     </div>
   )
 }
