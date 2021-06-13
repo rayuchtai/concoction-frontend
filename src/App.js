@@ -4,7 +4,8 @@ import axios from 'axios'
 
 //importing components
 import AddForm from './components/AddForm.js'
-import EditForm from './components/EditForm.js'
+import Worlds from './components/Worlds.js'
+import Home from './components/Home.js'
 
 const App = () => {
 
@@ -57,24 +58,44 @@ const App = () => {
   }, [])
 
   return (
-    <div>
-      <h1>Concoction</h1>
-      <AddForm addWorld={addWorld}/>
-      {worlds.map((world) => {
-        return (
-          <>
-          <h3>{world.name}</h3>
-          <h4>Creation: {world.creation}</h4>
-          <h4>Notes: {world.notes}</h4>
-          <details>
-            <summary>Edit World</summary>
-            <EditForm world={world} editWorld={editWorld} />
-          </details>
-          <button onClick={() => deleteWorld(world.id)}>X</button>
-          </>
-        )
-      })}
+    <div className="app">
+      <BrowserRouter>
+        <nav>
+          <div>
+            <Link to="/">Home</Link>
+          </div>
+          <div>
+            <Link to="/worlds">Worlds</Link>
+          </div>
+          <div>
+            <Link to="/create">Create a World</Link>
+          </div>
+        </nav>
+        <Switch>
+          <Route path="/home">
+            <Home />
+          </Route>
+          <Route path="/worlds">
+            {worlds.reverse().map((world) => {
+              return (
+                <Worlds
+                  world={world}
+                  worlds={worlds}
+                  edit={editWorld}
+                  deleteWorld={deleteWorld}
+                />
+              )
+            })}
+          </Route>
+          <Route path="/create">
+            <AddForm addWorld={addWorld} />
+          </Route>
+        </Switch>
+      </BrowserRouter>
+
+
     </div>
+
   )
 }
 

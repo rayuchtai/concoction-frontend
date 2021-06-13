@@ -23,13 +23,13 @@ const EditForm = (props) => {
       <br />
       <label htmlFor="creation">Creation:</label>
       <br />
-      <input id="creation" type="text" name="creation"  onChange={handleChange}/>
+      <textarea id="creation" type="text" name="creation" onChange={handleChange} placeholder="How was the world created?" rows="3" required></textarea>
       <br />
       <br />
       <label htmlFor="notes">Notes:</label>
       <br />
       <textarea id="notes" type="text" name="notes" onChange={handleChange}
-            placeholder="extra info???" rows="3" required>
+            placeholder="Important world features to note..." rows="3" required>
             </textarea>
       <br />
       <br />
