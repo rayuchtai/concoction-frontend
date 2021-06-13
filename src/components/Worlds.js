@@ -7,7 +7,6 @@ const Worlds = (props) => {
   return (
     <div className="display">
     <h1>Worlds</h1>
-      <h1>Concoction</h1>
       {props.worlds.map((world) => {
         return (
           <>

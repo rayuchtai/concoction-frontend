@@ -23,13 +23,13 @@ const AddForm = (props) => {
       <br />
       <label htmlFor="creation">Creation:</label>
       <br />
-      <input id="creation" type="text" name="creation" value={world.creation} onChange={handleChange}/>
+      <textarea id="creation" type="text" name="creation" placeholder="How was the world created?" rows="3" value={world.creation} onChange={handleChange}/>
       <br />
       <br />
       <label htmlFor="notes">Notes:</label>
       <br />
       <textarea id="notes" type="text" name="notes" onChange={handleChange} value={world.notes}
-            placeholder="extra info???" rows="3" required>
+            placeholder="Important World Features to note..." rows="3" required>
             </textarea>
       <br />
       <input type="submit" value="Create New World" />
