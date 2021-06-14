@@ -21,10 +21,15 @@
   display: block;
 }
 .nav-link {
-  color: rgb(86, 139, 191);
-  font-family: 'Montserrat', sans-serif;
+  color: rgb(255, 156, 159);
+  font-family: 'Poiret One', cursive;
+  font-size: 1.5em;
 }
 
+.nav-link:hover{
+  text-shadow: 2px 2px rgb(255, 247, 171);
+  color: rgb(155, 209, 167)
+}
 
 .navbar > .container-fluid {
   justify-content:space-between;

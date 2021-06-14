@@ -68,7 +68,7 @@ const App = () => {
   return (
     <div className="app">
       <BrowserRouter>
-        <nav className="nav-bar">
+        <nav className="navbar">
           <ul className="nav nav-tabs justify-content-beginning">
             <li className="nav-item">
               <Link className="nav-link" to="/">Home</Link>

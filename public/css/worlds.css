@@ -5,9 +5,10 @@
 }
 
 .worlds > h1 {
+  color: rgb(128, 186, 157);
   margin-top: 1em;
   font-size: 3em;
-  font-family: 'Playball', cursive;
+  font-family: 'Yeseva One', cursive;
 }
 
 .world {
@@ -27,7 +28,7 @@
   margin-right: .50em;
   width: 100px;
   border: none;
-  background-color: rgb(169, 209, 212)
+  background-color: rgb(128, 186, 157)
 }
 
 .edit-form > form > #delete-btn {
@@ -35,6 +36,6 @@
   margin-right: .50em;
   width: 100px;
   border:none;
-  background-color: rgb(255, 128, 128)
+  background-color: rgb(255, 156, 159)
 
 }

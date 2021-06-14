@@ -59,6 +59,9 @@ const Home = () => {
           Concoction is a place where writers can post world ideas that can inspire other writers <br /> to create their own worlds and/or help writers create their own world for their writing piece.
         </p>
         <p>
+          World-building is already a mentally taxing aspect of writing especially writing fantasy that takes place in a unique world! One must think of social norms, cultures, species, the dynamics between species, nationalities, and/or races in this unique world.
+        </p>
+        <p className="bold">
           Remember to have fun creating worlds!
         </p>
       </div>
