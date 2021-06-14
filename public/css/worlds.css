@@ -14,7 +14,9 @@
 .world {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  padding: 1em;
   width: 80%;
   margin: 1em 0em;
   font-family: 'Raleway', sans-serif;
