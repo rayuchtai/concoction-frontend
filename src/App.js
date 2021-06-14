@@ -80,6 +80,7 @@ const App = () => {
               <Link className="nav-link" to="/create">Create a World</Link>
             </li>
           </ul>
+          <img src="imgs/world.png" alt="logo" id="logo" />
         </nav>
         <Switch>
           <Route path="/worlds">
